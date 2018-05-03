@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'Cantarell';
+	src: url('../fonts/Cantarell-Regular.ttf');
+	font-weight: normal; 
+}
+@font-face {
+    font-family: 'TrendSansOne';
+	src: url('../fonts/TrendSansOne.ttf');
+	font-weight: normal; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.logo {
+    height: 4.5em;
+    background: white;
+    text-align: center;
+    
+}
+
+.logo h1 {
+    color: #6794b7;
+    font-family: TrendSansOne;
+    font-weight: normal;
+    font-size: 38px;
+    margin: 0;
+    padding: 0;
+}
+
+.logo h1 span {
+    content: url('../img/racoon.png');
+    position: relative;
+    top: 0.5em;
+    left: 0.04em;
+    margin: 0 0.1em;
+}
+
+.menu {
+    list-style: none;
+    background: #6b9ad0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border-bottom: 0.26em solid #c6defa;
+}
+
+.menu li {
+    font-family: 'Arial Narrow';
+    color: white;
+    font-size: 18px;    
+    padding: 1em;
+    margin: 0 1.3em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li:hover::after {
+    content: url('../img/menu-marker.png');
+    position: absolute;
+    margin-top: 1.8em;
+}
+
+.main-sidebar-wrapper {
+    display: flex;
+    justify-content:center;
+}
+
+
+main {
+    width: 40%;
+    min-width: 455px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 14px;
+}
+
+.blog-post {
+    position: relative;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.article-content {    
+    width: 100%;
+}
+
+.blog-post img {
+    width: 100%;
+}
+
+.blog-post h2 {
+    font-family: 'Arial Narrow';
+    font-size: 20px;
+    padding-bottom: 8px; 
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.post-info-socials-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-top: 1px solid #e2e5e8;
+    border-bottom: 1px solid #e2e5e8;
+}
+
+.post-info {
+    font-family: 'Arial Regular';
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-date, .post-author {
+    margin-left: 20px;
+    position: relative;
+}
+
+.post-date::before {
+    content: url('../img/clock.png');
+    margin-right: 3px;
+    position: absolute;
+    left: -15px;
+    top: 1px;
+}
+
+.post-author::before {
+    content: url('../img/step.png');
+    margin-right: 3px;
+    position: absolute;
+    left: -13px;
+}
+
+.blog-post p {
+    font-family: 'Arial Regular';
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: justify;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.share-socials {
+    display: flex;
+}
+
+.share-socials a {
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 24px;
+    text-decoration: none;     
+    color: white;
+    background: #d1dae3;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px;
+    align-items: center;
+    margin: 0 6px;
+}
+
+.share-socials a span {
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.share-socials a:last-child {
+    margin-right: 0;
+}
+
+.fa-facebook:hover {
+    background: #3b5999;
+}
+
+.fa-google-plus:hover {
+    background: #d34836;
+}
+
+.fa-twitter:hover {
+    background: #55acee;
+}
+
+.fa-vk:hover {
+    background: #4c75a3;
+}
+
+.fa-odnoklassniki:hover {
+    background: #ed812b;
+}
+
+sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 15%;
+    min-width: 245px;
+}
+.additional-info-item {
+    margin-bottom: 30px;
+}
+.additional-info h2 {
+    font-family: 'Cantarell';
+    font-weight: normal;
+    font-size: 18px;
+    color: #6290b4;
+    border-bottom: 5px solid #6794b7;
+    margin-top: 0;
+}
+
+.additional-info h2::before {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 26px;
+    background: #6794b7;
+    margin-right: 5px;
+    position: relative;
+}
+
+.about h2::before {
+    content: '?';
+}
+
+.some-info h2::before {
+    content: '!';
+}
+
+.additional-info p {
+    font-family: 'Arial Regular';
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 0;
+}
+  
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tag-wrapper {
+    height: 18px;
+    overflow: hidden;
+    margin: 0 4px 6px;
+}
+
+.tag {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tag a {   
+    text-decoration: none; 
+    font-family: 'Arial Regular';
+    font-size: 12px;
+    color: white;
+    background: #6794b7;
+    line-height: 18px;
+    padding: 0 12px 0 14px;        
+}
+
+
+.tag::after {
+    content: url('../img/tag-end.png');
+}
+
+@media screen and (max-width: 770px) {
+   
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .blog-post {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .article-content {
+        width: 83%;
+    }
+    
+    .additional-info{
+        display: none;
+    }
+
+    sidebar {
+       order: -1;
+       width: 90%;
+       align-self: center;
+    }
+
+    .tags {
+        align-self: center;
+        justify-content: center;;
+    }
+
+    .tag-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .main-sidebar-wrapper {
+        flex-direction: column;
+    }
+
+
+    .share-socials {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-end;
+        top: 0;
+        right: 0;    
+    }
+
+    .share-socials a{
+        display: flex;
+        margin: 0 0 8px;    
+    }
+
+    .fa-facebook {
+        background-color: #3b5999!important;
+    }
+    
+    .fa-google-plus {
+        background: #d34836!important;
+    }
+    
+    .fa-twitter {
+        background: #55acee!important;
+    }
+    
+    .fa-vk {
+        background: #4c75a3!important;
+    }
+    
+    .fa-odnoklassniki {
+        background: #ed812b!important;
+    }
+
+    
+}
