@@ -43,29 +43,67 @@ body {
 }
 
 .menu {
-    list-style: none;
+    position: relative;
     background: #6b9ad0;
     display: flex;
     justify-content: center;
-    padding: 0;
-    border-bottom: 0.26em solid #c6defa;
+    align-items: center;
+    border-bottom: 4px solid #c6defa;
+    margin: 15px 0 30px 0;
 }
 
-.menu li {
+.menu-button {
+    width: 40px;
+    height: 50px;
+    background: #7ca7d9;
+    color: #608dc1;
+    margin: 2px 2px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial Regular';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.about-button {
+    display: none;
+}
+
+.some-info-button {
+    display: none;
+}
+.more-button {
+    display: none;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;  
+}
+
+.navigation li {
+    margin: 0 calc(100vw/50) 0 calc(100vw/50);
+}
+
+.navigation li a {
     font-family: 'Arial Narrow';
     color: white;
     font-size: 18px;    
-    padding: 1em;
-    margin: 0 1.3em;
+    padding: 14px;
+    margin: 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 
-.menu li:hover::after {
+.menu li a:hover::after {
     content: url('../img/menu-marker.png');
     position: absolute;
-    margin-top: 1.8em;
+    margin-top: 30 px;
 }
 
 .main-sidebar-wrapper {
@@ -278,7 +316,19 @@ sidebar {
 }
 
 @media screen and (max-width: 770px) {
-   
+    .menu {
+        justify-content: space-between;
+    }
+
+    .about-button {
+        display: flex;
+    }
+
+    .some-info-button {
+        display: flex;
+        order: 1;
+    }
+
     main {
         width: 100%;
         margin: 0;
@@ -290,7 +340,7 @@ sidebar {
     }
 
     .article-content {
-        width: 83%;
+        width: 82%;
     }
     
     .additional-info{
@@ -305,7 +355,7 @@ sidebar {
 
     .tags {
         align-self: center;
-        justify-content: center;;
+        justify-content: center;
     }
 
     .tag-wrapper {
@@ -322,7 +372,7 @@ sidebar {
         flex-direction: column;
         align-items: flex-end;
         top: 0;
-        right: 0;    
+        right: -2px;  
     }
 
     .share-socials a{
