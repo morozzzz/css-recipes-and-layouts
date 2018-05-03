@@ -3,6 +3,7 @@
 	src: url('../fonts/Cantarell-Regular.ttf');
 	font-weight: normal; 
 }
+
 @font-face {
     font-family: 'TrendSansOne';
 	src: url('../fonts/TrendSansOne.ttf');
@@ -18,11 +19,18 @@ body {
     justify-content: space-between;    
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .logo {
-    height: 4.5em;
+    
+    height: 75px;
     background: white;
     text-align: center;
-    
 }
 
 .logo h1 {
@@ -31,18 +39,19 @@ body {
     font-weight: normal;
     font-size: 38px;
     margin: 0;
-    padding: 0;
+    padding: 0;   
 }
 
 .logo h1 span {
     content: url('../img/racoon.png');
     position: relative;
-    top: 0.5em;
-    left: 0.04em;
-    margin: 0 0.1em;
+    top: 15px;
+    left: 1px;
+    margin: 0 2px;
 }
 
 .menu {
+    width: 100%;
     position: relative;
     background: #6b9ad0;
     display: flex;
@@ -50,15 +59,16 @@ body {
     align-items: center;
     border-bottom: 4px solid #c6defa;
     margin: 15px 0 30px 0;
+    height: 48px;
 }
 
 .menu-button {
-    width: 40px;
-    height: 50px;
+    min-width: 40px;
+    height: 92%;
     background: #7ca7d9;
     color: #608dc1;
     margin: 2px 2px 2px;
-    display: flex;
+    display: flex;    
     align-items: center;
     justify-content: center;
     font-family: 'Arial Regular';
@@ -73,6 +83,7 @@ body {
 .some-info-button {
     display: none;
 }
+
 .more-button {
     display: none;
 }
@@ -81,36 +92,38 @@ body {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;  
+    margin: 0; 
+    width: 80%; 
+    justify-content: center;
 }
 
 .navigation li {
-    margin: 0 calc(100vw/50) 0 calc(100vw/50);
+    margin: 0 15px 0 15px;
 }
 
 .navigation li a {
     font-family: 'Arial Narrow';
     color: white;
-    font-size: 18px;    
+    font-size: 18;    
     padding: 14px;
     margin: 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
     text-decoration: none;
+    position: relative;
 }
 
 .menu li a:hover::after {
     content: url('../img/menu-marker.png');
     position: absolute;
-    margin-top: 30 px;
+    margin-top: 30px;
 }
 
 .main-sidebar-wrapper {
     display: flex;
     justify-content:center;
 }
-
 
 main {
     width: 40%;
@@ -243,9 +256,11 @@ sidebar {
     width: 15%;
     min-width: 245px;
 }
+
 .additional-info-item {
     margin-bottom: 30px;
 }
+
 .additional-info h2 {
     font-family: 'Cantarell';
     font-weight: normal;
@@ -310,7 +325,6 @@ sidebar {
     padding: 0 12px 0 14px;        
 }
 
-
 .tag::after {
     content: url('../img/tag-end.png');
 }
@@ -329,9 +343,18 @@ sidebar {
         order: 1;
     }
 
+    .navigation {
+        justify-content: space-between;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+
     main {
         width: 100%;
-        margin: 0;
+        margin: 0;        
+        min-width:initial;
     }
 
     .blog-post {
@@ -366,7 +389,6 @@ sidebar {
         flex-direction: column;
     }
 
-
     .share-socials {
         position: absolute;
         flex-direction: column;
@@ -398,7 +420,36 @@ sidebar {
     
     .fa-odnoklassniki {
         background: #ed812b!important;
+    }   
+}
+
+@media screen and (max-width: 500px) {
+
+       .navigation li a {
+           padding: 0;
+       }
+}
+
+@media screen and (max-width: 400px) {
+
+    .navigation li a {
+        font-size: 14px;
     }
 
+    .logo h1{
+        font-size: 28px;
+    }
     
+}
+
+@media screen and (max-width: 350px) {
+    .logo h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    .navigation {
+        display: none;
+    }
 }
