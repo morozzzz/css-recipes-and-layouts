@@ -14,14 +14,22 @@
         <div class="menu">
             <div class="menu-button about-button">?</div>
             <div class="menu-button some-info-button">!</div>
-            <div class="menu-button more-button"></div>            
-            <ul class="navigation">
-                <li><a href="">JAVASCRIPT</a></li>
-                <li><a href="">CSS</a></li>
-                <li><a href="">LATEST</a></li>
-                <li><a href="">HTML</a></li>
-                <li><a href="">DESIGN</a></li>
-            </ul>
+            <div class="menu-button tag-button">
+                <div class=" tag-button-content"></div>
+            </div>
+              
+            <div class="humburger-wrapper">
+                <div class="menu-button humburger-button">
+                    <div class="humburger-button-content"></div>
+                </div>          
+                <ul class="navigation">                    
+                    <li><a href="">JAVASCRIPT</a></li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">LATEST</a></li>
+                    <li><a href="">HTML</a></li>
+                    <li><a href="">DESIGN</a></li>                
+                </ul>
+            </div>
         </div>
     </header>
     <div class="main-sidebar-wrapper">
@@ -136,7 +144,13 @@
         </sidebar>
     </div>
    
-    <div class="loading-spinner"></div>
+    <div class="loading-spinner">
+        <img src="img/spinner.png" alt="spinner">
+    </div>
+    <script>
+        const spinner = document.querySelector('.loading-spinner');
+        setTimeout(() => document.body.removeChild(spinner), 2000);
+    </script>
 
     
 </body>
