@@ -13,7 +13,7 @@
 .active::after {
     content: url('../img/menu-marker.png');
     position: absolute;
-    margin-top: 29.5px;
+    margin-top: 30px;
 }
 
 body {
@@ -203,7 +203,8 @@ header {
 }
 
 .menu li:hover {
-    background: #90b0d4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#90b0d425), color-stop(30%, #90b0d4), color-stop(70%, #90b0d4), to(#90b0d425));
+    background: linear-gradient(#90b0d425 0%, #90b0d4 30%, #90b0d4 70%, #90b0d425 100%);
 }
 
 .main-sidebar-wrapper {
