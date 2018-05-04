@@ -5,6 +5,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,11 +24,11 @@
                     <div class="hamburger-button-content"></div>
                 </div>          
                 <ul class="navigation">                    
-                    <li><a href="">JAVASCRIPT</a></li>
-                    <li><a href="">CSS</a></li>
-                    <li><a href="">LATEST</a></li>
-                    <li><a href="">HTML</a></li>
-                    <li><a href="">DESIGN</a></li>                
+                    <li><a id="menu-item-js" href="">JAVASCRIPT</a></li>
+                    <li><a id="menu-item-css" href="">CSS</a></li>
+                    <li><a id="menu-item-latest" href="">LATEST</a></li>
+                    <li><a id="menu-item-html" href="">HTML</a></li>
+                    <li><a id="menu-item-design" href="">DESIGN</a></li>                
                 </ul>
             </div>
         </div>
@@ -144,14 +145,12 @@
         </sidebar>
     </div>
    
-    <div class="loading-spinner">
-        <img src="img/spinner.png" alt="spinner">
+    <div class="loading-spinner">        
+         <img src="img/spinner.png" alt="spinner">        
     </div>
     <script>
         const spinner = document.querySelector('.loading-spinner');
         setTimeout(() => document.body.removeChild(spinner), 2000);
-    </script>
-
-    
+    </script>    
 </body>
 </html>

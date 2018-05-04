@@ -10,6 +10,12 @@
 	font-weight: normal; 
 }
 
+.active::after {
+    content: url('../img/menu-marker.png');
+    position: absolute;
+    margin-top: 29.5px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -159,15 +165,20 @@ header {
         -ms-flex-pack: center; 
             justify-content: center;
     height: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .navigation li {
     margin: 0 15px 0 15px;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-  
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .navigation li a {
@@ -186,11 +197,13 @@ header {
             justify-content: center;
     text-decoration: none;
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .menu li:hover {
-    background: hsl(212, 44%, 70%);
+    background: #90b0d4;
 }
 
 .main-sidebar-wrapper {
@@ -453,7 +466,7 @@ sidebar {
 }
 
 .loading-spinner { 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: -webkit-box; 
     display: -ms-flexbox; 
@@ -627,7 +640,13 @@ sidebar {
 
     .logo h1{
         font-size: 28px;
-    }    
+    }   
+    
+    .active::after {
+        content: url('../img/menu-marker.png');
+        position: absolute;
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -641,7 +660,6 @@ sidebar {
 }
 
 @media screen and (max-width: 320px) {
-
     .hamburger-wrapper {
         position: absolute;
         right: 0;
@@ -682,8 +700,8 @@ sidebar {
         border-bottom: 4px solid #c6defa;
     }
 
-    .menu li a:hover::after {
-        margin-top: 19px;
+    .menu li a::after {
+        display: none;
     }  
 
     .tag-button {
