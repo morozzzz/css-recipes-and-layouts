@@ -10,19 +10,19 @@
 <body>
     <header>
         <div class="logo">
-            <h1>RACCO<span>O</span>NBLOG</h1>
+            <a href="index.html"><h1>RACCO<span>O</span>NBLOG</h1></a>
         </div>
         <div class="menu">
             <div class="menu-button about-button">?</div>
             <div class="menu-button some-info-button">!</div>
             <div class="menu-button tag-button">
                 <div class=" tag-button-content"></div>
-            </div>
-              
+            </div>              
             <div class="hamburger-wrapper">
                 <div class="menu-button hamburger-button">
                     <div class="hamburger-button-content"></div>
-                </div>          
+                </div>
+                <span>        
                 <ul class="navigation">                    
                     <li><a id="menu-item-js" href="">JAVASCRIPT</a></li>
                     <li><a id="menu-item-css" href="">CSS</a></li>
@@ -30,6 +30,7 @@
                     <li><a id="menu-item-html" href="">HTML</a></li>
                     <li><a id="menu-item-design" href="">DESIGN</a></li>                
                 </ul>
+                </span>  
             </div>
         </div>
     </header>
@@ -146,11 +147,7 @@
     </div>
    
     <div class="loading-spinner">        
-         <img src="./img/spinner.png" alt="spinner">        
-    </div>
-    <script>
-        const spinner = document.querySelector('.loading-spinner');
-        setTimeout(() => document.body.removeChild(spinner), 2000);
-    </script>    
+        <img src="./img/spinner.png" alt="spinner">        
+    </div>    
 </body>
 </html>

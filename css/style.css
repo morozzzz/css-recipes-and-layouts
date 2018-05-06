@@ -10,10 +10,22 @@
 	font-weight: normal; 
 }
 
+
+
 .active::after {
     content: url('../img/menu-marker.png');
     position: absolute;
-    margin-top: 30px;
+    top: 43px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 100%;
+    left: 0;
 }
 
 body {
@@ -61,21 +73,51 @@ header {
             justify-content: center;
 }
 
+.logo a {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+}
+
 .logo h1 {
     color: #6794b7;
     font-family: TrendSansOne;
     font-weight: normal;
+    font-style: normal;
     font-size: 38px;
     margin: 0;
-    padding: 0;   
+    padding: 0;  
+    display: -webkit-box;  
+    display: -ms-flexbox;  
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    position: relative;
+    top: -5px;
 }
 
 .logo h1 span {
-    content: url('../img/racoon.png');
+    margin: 0 12px;
     position: relative;
-    top: 15px;
-    left: 1px;
-    margin: 0 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.logo h1 span::after {
+    content: url('../img/racoon.png');
+    position: absolute;
+    left: -9px;
+    top: 0;
 }
 
 .menu {
@@ -98,7 +140,7 @@ header {
 
 .menu-button {
     width: 40px;
-    height: 92%;
+    height: 42px;
     background: #7ca7d9;
     color: #608dc1;
     margin: 2px 1.5px 2px;
@@ -111,8 +153,9 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-family: 'Arial Regular';
+    font-family: 'Arial Regular', Arial, sans-serif;
     font-size: 20px;
+    font-style: normal;
     cursor: pointer;
 }
 
@@ -123,6 +166,7 @@ header {
 .menu-button:active {
     background: hsl(212, 55%, 80%);
 }
+
 .about-button {
     display: none;
 }
@@ -131,21 +175,23 @@ header {
     display: none;
 }
 
-.tag-button-content {
+.tag-button-content::after {
     content: url('../img/tag.png');
 }
 
 .tag-button {
     display: none;
+    font-size: 0;
 }
 
-.hamburger-button-content {
+.hamburger-button-content::after {
     content: url('../img/hamburger.png');
 }
 
 .hamburger-button {
-    background: initial;
-    display: none;   
+    background: 0;
+    display: none; 
+    font-size: 0;  
 }
 
 .hamburger-wrapper {
@@ -159,7 +205,7 @@ header {
     display: -ms-flexbox;
     display: flex;
     padding: 0;
-    margin: 0; 
+    margin: 0 0 0 -10px; 
     width: 100%; 
     -webkit-box-pack: center; 
         -ms-flex-pack: center; 
@@ -167,7 +213,7 @@ header {
     height: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
+            align-items: center;    
 }
 
 .navigation li {
@@ -179,10 +225,13 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
 }
 
 .navigation li a {
-    font-family: 'Arial Narrow';
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
     color: white;
     font-size: 18px;    
     padding: 0 13px;
@@ -196,7 +245,6 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     text-decoration: none;
-    position: relative;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -205,6 +253,7 @@ header {
 .menu li:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(#90b0d425), color-stop(30%, #90b0d4), color-stop(70%, #90b0d4), to(#90b0d425));
     background: linear-gradient(#90b0d425 0%, #90b0d4 30%, #90b0d4 70%, #90b0d425 100%);
+    background-image: -ms-linear-gradient(top, rgba(144, 176, 212, 0.145) 0%, rgb(144, 176, 212) 30%, rgb(144, 176, 212) 70%, rgba(144, 176, 212, 0.145) 100%);
 }
 
 .main-sidebar-wrapper {
@@ -247,8 +296,9 @@ main {
 }
 
 .blog-post h2 {
-    font-family: 'Arial Narrow';
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
+    font-style: normal;
     color: #69747c;
     padding-bottom: 8px; 
     margin-top: 8px;
@@ -268,11 +318,13 @@ main {
     height: 40px;
     border-top: 1px solid #e2e5e8;
     border-bottom: 1px solid #e2e5e8;
+    width: 100%;
 }
 
 .post-info {
-    font-family: 'Arial Regular';
+    font-family: 'Arial Regular', Arial, sans-serif;
     font-size: 12px;
+    font-style: normal;
     color: #69747c;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -302,9 +354,10 @@ main {
 }
 
 .blog-post p {
-    font-family: 'Arial Regular';
+    font-family: 'Arial Regular', Arial, sans-serif;
     font-size: 12px;
     font-weight: normal;
+    font-style: normal;
     color: #69747c;
     line-height: 1.5;
     text-align: justify;
@@ -316,12 +369,16 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .share-socials a {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 16px;
+    font-style: normal;
     height: 24px;
     text-decoration: none;     
     color: white;
@@ -342,7 +399,7 @@ main {
 
 .share-socials a span {
     padding-left: 10px;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Arial Regular', Arial, sans-serif;
 }
 
 .share-socials a:last-child {
@@ -392,15 +449,28 @@ sidebar {
     font-family: 'Cantarell';
     font-weight: normal;
     font-size: 18px;
+    font-style: normal;
     color: #6290b4;
     border-bottom: 5px solid #6794b7;
     margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 1.4;
 }
 
 .additional-info h2::before {
     color: white;
-    display: inline-block;
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 30px;
     height: 26px;
     background: #6794b7;
@@ -417,9 +487,10 @@ sidebar {
 }
 
 .additional-info p {
-    font-family: 'Arial Regular';
+    font-family: 'Arial Regular', Arial, sans-serif;
     font-size: 12px;
     font-weight: normal;
+    font-style: normal;
     color: #69747c;
     line-height: 1.5;
     text-align: justify;
@@ -454,8 +525,10 @@ sidebar {
 
 .tag a {   
     text-decoration: none; 
-    font-family: 'Arial Regular';
+    font-family: 'Arial Regular', Arial, sans-serif;
     font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
     color: white;
     background: #6794b7;
     line-height: 18px;
@@ -466,17 +539,18 @@ sidebar {
     content: url('../img/tag-end.png');
 }
 
-.loading-spinner { 
+.loading-spinner {
     position: fixed;
     bottom: 0;
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+}
+.loading-spinner img { 
     -webkit-animation-name: spin;
             animation-name: spin;
     -webkit-animation-duration: 1000ms;
@@ -522,7 +596,7 @@ sidebar {
     main {
         width: 100%;
         margin: 0;        
-        min-width:initial;
+        min-width: 0;
     }
     
     .blog-post {
@@ -547,9 +621,11 @@ sidebar {
        width: 90%;
        -ms-flex-item-align: center;
            align-self: center;
+        margin-bottom: 10px;
     }
 
     .tags {
+        width: 100%;
         -ms-flex-item-align: center;
             align-self: center;
         -webkit-box-pack: center;
@@ -617,7 +693,7 @@ sidebar {
     }   
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 650px) {
     .navigation li {
         margin: 0;
     }
@@ -628,25 +704,39 @@ sidebar {
     }   
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
        .navigation li a {
            padding: 0;
        }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
     .navigation li a {
         font-size: 12px;
     }
 
-    .logo h1{
+    .logo {
+        height: 55px;
+    }
+
+    .logo h1 {
         font-size: 28px;
+        top: -1px;
     }   
     
+    .logo h1 span::after {
+        top: -9px;
+        left: -14px;
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+    }
+
     .active::after {
-        content: url('../img/menu-marker.png');
-        position: absolute;
-        margin-top: 30px;
+        top: 45px;
+    }
+
+    .menu {
+        margin-bottom: 20px;
     }
 }
 
@@ -658,14 +748,19 @@ sidebar {
     .share-socials a {
         font-size: 12px;
     }
+
+    .navigation {
+        margin-left: -3px;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .hamburger-wrapper {
         position: absolute;
         right: 0;
+        top: 0;
         width: 30px;
-        height: 100%;
+        height: 96%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -678,8 +773,9 @@ sidebar {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        position: relative;
     }
-
+   
     .navigation {
         display: none;
     }
@@ -699,6 +795,7 @@ sidebar {
                 align-items: center;
         right: -5px;
         border-bottom: 4px solid #c6defa;
+        margin-left: 10px;
     }
 
     .menu li a::after {
@@ -720,11 +817,16 @@ sidebar {
 
     .logo h1 {
         font-size: 24px;
+        top: -3px;
     }
-
     .logo h1 span {
-        width: 34px;
-        top: 9px;
+        margin: 0 9px;
+    }
+    .logo h1 span::after {
+        top: -12px;
+        left: -16.5px;
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7);
     }
 
     .menu {
@@ -739,6 +841,7 @@ sidebar {
 
     .menu-button {
         width: 30px;
+        height: 30px;
     }
 
     .article-content {
