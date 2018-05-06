@@ -23,15 +23,4 @@ menuItemToSetActive
     ? menuItemToSetActive.classList.add('active')
     : firstMenuItem.classList.add('active');
 
-window.onbeforeunload = function() {
-    window.onunload = function() {
-        window.sessionStorage.isMySessionActive = 'false';
-    };
-    return undefined;
-};
-
-window.onload = function() {
-    window.sessionStorage.isMySessionActive = 'true';
-};
-
 setTimeout(deleteSpinner, 2000);
